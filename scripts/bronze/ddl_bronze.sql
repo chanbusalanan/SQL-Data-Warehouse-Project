@@ -8,65 +8,76 @@ Script Purpose:
 ===============================================================================
 */
 
--- Create table bronze.crm_cust_info
-drop table if exists bronze.crm_cust_info;
-create table bronze.crm_cust_info(
-	cst_id			nvarchar(50),
-	cst_key			nvarchar(50),
-	cst_firstname		nvarchar(50),
-	cst_lastname		nvarchar(50),
-	cst_marital_status	nvarchar(50),
-	cst_gender		nvarchar(50),
-	cst_crate_date		date
+-- ============================================================================
+-- Table: bronze.crm_cust_info
+-- ============================================================================
+DROP TABLE IF EXISTS bronze.crm_cust_info;
+CREATE TABLE bronze.crm_cust_info (
+    cst_id             NVARCHAR(50),
+    cst_key            NVARCHAR(50),
+    cst_firstname      NVARCHAR(50),
+    cst_lastname       NVARCHAR(50),
+    cst_marital_status NVARCHAR(50),
+    cst_gender         NVARCHAR(50),
+    cst_crate_date     DATE
 );
 
--- Create table bronze.crm_prd_info
-drop table if exists bronze.crm_prd_info;
-create table bronze.crm_prd_info(
-	prd_id		nvarchar(50),
-	prd_key		nvarchar(50),
-	prd_nm		nvarchar(50),
-	prd_cost	nvarchar(50),
-	prd_line	nvarchar(50),
-	prd_start_dt	date,
-	prd_end_dt	date
+-- ============================================================================
+-- Table: bronze.crm_prd_info
+-- ============================================================================
+DROP TABLE IF EXISTS bronze.crm_prd_info;
+CREATE TABLE bronze.crm_prd_info (
+    prd_id          NVARCHAR(50),
+    prd_key         NVARCHAR(50),
+    prd_nm          NVARCHAR(50),
+    prd_cost        NVARCHAR(50),
+    prd_line        NVARCHAR(50),
+    prd_start_dt    DATE,
+    prd_end_dt      DATE
 );
 
--- Create table bronze.crm_sales_details
-drop table if exists bronze.crm_sales_details;
-create table bronze.crm_sales_details(
-	sls_order_num	nvarchar(50),
-	sls_prd_key	nvarchar(50),
-	sls_cust_id	nvarchar(50),
-	sls_order_dt	nvarchar(50),
-	sls_ship_dt	nvarchar(50),
-	sls_due_dt	nvarchar(50),
-	sls_sales	int,
-	sls_qty		int,
-	sls_price	int
+-- ============================================================================
+-- Table: bronze.crm_sales_details
+-- ============================================================================
+DROP TABLE IF EXISTS bronze.crm_sales_details;
+CREATE TABLE bronze.crm_sales_details (
+    sls_order_num   NVARCHAR(50),
+    sls_prd_key     NVARCHAR(50),
+    sls_cust_id     NVARCHAR(50),
+    sls_order_dt    NVARCHAR(50),
+    sls_ship_dt     NVARCHAR(50),
+    sls_due_dt      NVARCHAR(50),
+    sls_sales       INT,
+    sls_qty         INT,
+    sls_price       INT
 );
 
--- Create table bronze.erp_cust_az12
-drop table if exists bronze.erp_cust_az12;
-create table bronze.erp_cust_az12(
-	cid	nvarchar(50),
-	bdate	date,
-	gen	nvarchar(50)
-)
+-- ============================================================================
+-- Table: bronze.erp_cust_az12
+-- ============================================================================
+DROP TABLE IF EXISTS bronze.erp_cust_az12;
+CREATE TABLE bronze.erp_cust_az12 (
+    cid     NVARCHAR(50),
+    bdate   DATE,
+    gen     NVARCHAR(50)
+);
 
+-- ============================================================================
+-- Table: bronze.erp_loc_a101
+-- ============================================================================
+DROP TABLE IF EXISTS bronze.erp_loc_a101;
+CREATE TABLE bronze.erp_loc_a101 (
+    cid     NVARCHAR(50),
+    cntry   NVARCHAR(50)
+);
 
--- Create table bronze.erp_loc_a101
-drop table if exists  bronze.erp_loc_a101;
-create table  bronze.erp_loc_a101(
-	cid	nvarchar(50),
-	cntry	nvarchar(50)
-)
-
--- Create table bronze.erp_px_cat_g1v2
-drop table if exists bronze.erp_px_cat_g1v2
-create table bronze.erp_px_cat_g1v2(
-	id		nvarchar(50),
-	cat		nvarchar(50),
-	subcat		nvarchar(50),
-	maintenance 	nvarchar(50)
-)
+-- ============================================================================
+-- Table: bronze.erp_px_cat_g1v2
+-- ============================================================================
+DROP TABLE IF EXISTS bronze.erp_px_cat_g1v2;
+CREATE TABLE bronze.erp_px_cat_g1v2 (
+    id           NVARCHAR(50),
+    cat          NVARCHAR(50),
+    subcat       NVARCHAR(50),
+    maintenance  NVARCHAR(50)
+);
