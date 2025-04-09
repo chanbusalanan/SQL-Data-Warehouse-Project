@@ -15,6 +15,9 @@ This project showcases a **Data Warehousing** pipeline built on **SQL Server**, 
 - **Gold Layer (Business-Level Models)**  
   Aggregates and curates data for reporting, dashboards, and business intelligence use cases.
 
+![Architecture Diagram](docs/Data%20Warehouse%20Architecture.png)
+
+
 ## 🧰 Tools & Technologies
 
 - **SQL Server**  
@@ -36,7 +39,7 @@ This project showcases a **Data Warehousing** pipeline built on **SQL Server**, 
 3. **Modeling (Silver ➝ Gold):**  
    - Aggregate revenue by region, customer segment, product, etc.  
    - Build star schema (facts and dimensions) for reporting
-  
+![ERD](docs/gold_ERD.drawio.png)
 ## 📌 Future Improvements
 1. **Automate ETL with SQL Server Agent or Azure Data Factory**
 2. **Integrate real-time ingestion using Kafka**
