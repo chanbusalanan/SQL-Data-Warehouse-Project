@@ -8,7 +8,7 @@ Script Purpose:
         - Joins & Denormalization 
         - Filtering
         - Schema Alignment
-		- Inserting data into the tables in the gold schema
+	- Inserting data into the tables in the gold schema
 Parameters:
     None. 
     This stored procedure does not accept any parameters or return any values.
