@@ -41,7 +41,6 @@ CREATE TABLE gold.products (
     product_line    NVARCHAR(50),
     start_date      DATE,
     cost            INT,
-    FOREIGN KEY (category_id) REFERENCES gold.categories(category_id)
 );
 
 
@@ -74,6 +73,4 @@ CREATE TABLE gold.sales (
     quantity        INT,
     unit_price      INT,
     total_sales     INT,
-    FOREIGN KEY (customer_id) REFERENCES gold.customers(customer_id),
-    FOREIGN KEY (product_key) REFERENCES gold.products(product_key)
 );
