@@ -70,8 +70,8 @@ BEGIN
 	)
 	SELECT 
 		sls_order_num,
-		sls_prd_key,
 		sls_cust_id,
+		sls_prd_key,
 		sls_order_dt,
 		sls_ship_dt,
 		sls_due_dt,
